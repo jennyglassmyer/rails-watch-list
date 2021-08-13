@@ -1,6 +1,18 @@
-<h1>My Movie Lists</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1485846234645-a62644f84728?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2540&q=80);">
+  <div class="container">
+    <h1>Save all the <strong>movies</strong> you want to watch</h1>
+    <%= link_to "Create a Watchlist", new_list_path, class: "btn btn-outline-light main-page-btn" %>
+  </div>
+</div>
+
+<div class="container main-page-list">
+<h2>My Watchlists</h1>
 <ul>
 <% @lists.each do |list| %>
   <li><%= link_to list.name, list_path(list) %></li>
 <% end %>
 </ul>
+</div>
+
+
+

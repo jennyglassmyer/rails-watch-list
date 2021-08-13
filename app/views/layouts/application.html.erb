@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsWatchList</title>
+    <title> 🎬 Movie Watchlist </title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,7 +11,27 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class= "bg-white">
+  <nav class="navbar navbar-expand-sm navbar-light navbar-lewagon ">
+  <div class="container-fluid">
+  <%= link_to "#", class: "navbar-brand" do %>
+    <%= image_tag "https://images.unsplash.com/photo-1485846234645-a62644f84728?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2540&q=80" %>
+  <% end %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to "My Movie Watchlists", lists_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "New Watchlist", new_list_path, class: "nav-link" %>
+      </li>
+    </ul>
+  </div>
+</nav>
     <%= yield %>
   </body>
 </html>
